@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Alex Rivera – Photographer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root {
+  --bg: #111;
+  --surface: #1e1e1e;
+  --text: #e0e0e0;
+  --muted: #777;
+  --accent: #0fa3b1;
+  --border: #333;
+  --radius: 12px;
+  --shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f5f5f5;
+    --surface: #fff;
+    --text: #222;
+    --muted: #555;
+    --accent: #0a7d8b;
+    --border: #ddd;
+    --shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,sans-serif;line-height:1.5}
+header{background:var(--surface);box-shadow:var(--shadow);padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+h1{margin:0;font-size:clamp(1.5rem,4vw,2.5rem);color:var(--accent)}
+nav a{margin-left:1rem;color:var(--text);text-decoration:none;padding:0.4rem 0.8rem;border-radius:var(--radius);transition:background 150ms}
+nav a:hover,nav a:focus-visible{background:var(--accent);color:#fff}
+main{max-width:960px;margin:auto;padding:2rem 1rem}
+section{margin-bottom:4rem}
+h2{font-size:clamp(1.25rem,3vw,2rem);margin-bottom:1rem;color:var(--accent)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+.gallery img{width:100%;height:auto;border-radius:var(--radius);box-shadow:var(--shadow);cursor:pointer;object-fit:cover}
+.lightbox{position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.9);display:none;align-items:center;justify-content:center;z-index:1000}
+.lightbox img{max-width:90vw;max-height:90vh;border-radius:var(--radius);box-shadow:var(--shadow)}
+.lightbox:target{display:flex}
+footer{background:var(--surface);padding:1rem 2rem;text-align:center;font-size:0.875rem;color:var(--muted);border-top:1px solid var(--border)}
+button{background:var(--accent);color:#fff;border:none;padding:0.6rem 1.2rem;border-radius:var(--radius);cursor:pointer;transition:background 150ms}
+button:hover,button:focus-visible{background:#0c8a9a}
+button:disabled{background:#555;cursor:not-allowed}
+@media (max-width:480px){
+  header,footer{padding:1rem}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Alex Rivera</h1>
+  <nav>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+<main>
+  <section id="hero">
+    <h2>Capturing moments, one frame at a time.</h2>
+    <p>Landscape, portrait, and street photography with a modern, tech‑driven eye.</p>
+  </section>
+
+  <section id="gallery">
+    <h2>Portfolio</h2>
+    <div class="gallery">
+      <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='400'%20height='300'%3E%3Crect%20width='100%25'%20height='100%25'%20fill='%23555'/%3E%3Ctext%20x='50%25'%20y='50%25'%20dominant-baseline='middle'%20text-anchor='middle'%20fill='%23fff'%20font-size='24'%3EPhoto%201%3C/text%3E%3C/svg%3E" alt="Photo 1" data-index="0">
+      <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='400'%20height='300'%3E%3Crect%20width='100%25'%20height='100%25'%20fill='%23555'/%3E%3Ctext%20x='50%25'%20y='50%25'%20dominant-baseline='middle'%20text-anchor='middle'%20fill='%23fff'%20font-size='24'%3EPhoto%202%3C/text%3E%3C/svg%3E" alt="Photo 2" data-index="1">
+      <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='400'%20height='300'%3E%3Crect%20width='100%25'%20height='100%25'%20fill='%23555'/%3E%3Ctext%20x='50%25'%20y='50%25'%20dominant-baseline='middle'%20text-anchor='middle'%20fill='%23fff'%20font-size='24'%3EPhoto%203%3C/text%3E%3C/svg%3E" alt="Photo 3" data-index="2">
+      <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='400'%20height='300'%3E%3Crect%20width='100%25'%20height='100%25'%20fill='%23555'/%3E%3Ctext%20x='50%25'%20y='50%25'%20dominant-baseline='middle'%20text-anchor='middle'%20fill='%23fff'%20font-size='24'%3EPhoto%204%3C/text%3E%3C/svg%3E" alt="Photo 4" data-index="3">
+      <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='400'%20height='300'%3E%3Crect%20width='100%25'%20height='100%25'%20fill='%23555'/%3E%3Ctext%20x='50%25'%20y='50%25'%20dominant-baseline='middle'%20text-anchor='middle'%20fill='%23fff'%20font-size='24'%3EPhoto%205%3C/text%3E%3C/svg%3E" alt="Photo 5" data-index="4">
+      <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='400'%20height='300'%3E%3Crect%20width='100%25'%20height='100%25'%20fill='%23555'/%3E%3Ctext%20x='50%25'%20y='50%25'%20dominant-baseline='middle'%20text-anchor='middle'%20fill='%23fff'%20font-size='24'%3EPhoto%206%3C/text%3E%3C/svg%3E" alt="Photo 6" data-index="5">
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Alex</h2>
+    <p>Based in Seattle, Alex blends technology with a keen eye for storytelling. Over a decade of experience shooting everything from urban street scenes to remote wilderness.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>For bookings, collaborations, or just to say hello, drop a line at <a href="mailto:alex@example.com">alex@example.com</a>.</p>
+  </section>
+</main>
+
+<div id="lightbox" class="lightbox" tabindex="-1" aria-modal="true" role="dialog">
+  <button id="closeBtn" aria-label="Close" style="position:absolute;top:1rem;right:1rem;background:none;color:#fff;font-size:2rem;cursor:pointer;">&times;</button>
+  <img src="" alt="">
+</div>
+
+<footer>
+  © 2024 Alex Rivera. All rights reserved.
+</footer>
+
+<script>
+(function(){
+  const images = document.querySelectorAll('.gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightImg = lightbox.querySelector('img');
+  const closeBtn = document.getElementById('closeBtn');
+
+  function openLightbox(src, alt){
+    lightImg.src = src;
+    lightImg.alt = alt;
+    lightbox.style.display = 'flex';
+    lightbox.focus();
+  }
+
+  function closeLightbox(){
+    lightbox.style.display = 'none';
+    lightImg.src = '';
+    lightImg.alt = '';
+  }
+
+  images.forEach(img=>{
+    img.addEventListener('click',()=>openLightbox(img.src, img.alt));
+  });
+
+  closeBtn.addEventListener('click',closeLightbox);
+  lightbox.addEventListener('click',e=>{ if(e.target===lightbox) closeLightbox(); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape' && lightbox.style.display==='flex') closeLightbox(); });
+})();
+</script>
+</body>
+</html>
